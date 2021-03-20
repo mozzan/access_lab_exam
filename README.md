@@ -27,7 +27,7 @@ https://github.com/mozzan/access_lab_exam/wiki/API-Doc-%E3%84%A7-Voting-Server
 ### Rspec Test
 bundle exec rspec ./spec/controllers/vote_results_controller_spec.rb 
 
-### Sample Date
+### Sample Data
 bundle exec rake dev:sample
 
 ### Note
