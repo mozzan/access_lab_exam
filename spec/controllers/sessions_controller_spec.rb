@@ -17,6 +17,7 @@ describe SessionsController do
       expect(response.status).to eq(400)
       body = JSON.parse(response.body)
       expect(body["message"]).to eq("over limit")
+      clean_ip_connections(request.remote_ip)
     end
   end
 end
