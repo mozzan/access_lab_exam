@@ -1,24 +1,34 @@
-# README
+# Access Backend Exercise
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 1. Build an Raise Limit Server to serve the incoming requests
 
-Things you may want to cover:
+### API 
+localhost:3000/test_limit
 
-* Ruby version
+### API Doc
+https://github.com/mozzan/access_lab_exam/wiki/API-Doc--%E3%84%A7-IP-limit
 
-* System dependencies
+### Rspec Test
+bundle exec rspec ./spec/controllers/sessions_controller_spec.rb 
 
-* Configuration
+### Note
+The ip limit function is accomplished by using Redis server, therefore need to install redis if wanna run the code.
 
-* Database creation
 
-* Database initialization
+## 2. Build an Voting Server to determine an issue about Wuhan coronavirus
 
-* How to run the test suite
+### API 
+1. localhost:3000/vote_results  (POST)
+2. localhost:3000/vote_results  (GET)
 
-* Services (job queues, cache servers, search engines, etc.)
+### API Doc
+https://github.com/mozzan/access_lab_exam/wiki/API-Doc-%E3%84%A7-Voting-Server
 
-* Deployment instructions
+### Rspec Test
+bundle exec rspec ./spec/controllers/vote_results_controller_spec.rb 
 
-* ...
+### Sample Date
+bundle exec rake dev:sample
+
+### Note
+Anyone wanna vote need to get a token first. And the token only can be used one time.
