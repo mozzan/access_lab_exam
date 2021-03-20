@@ -1,0 +1,14 @@
+production:
+  ip_limit_count: 60
+  ip_limit_period: 60
+  redis_server: localhost
+
+development:
+  ip_limit_count: 60
+  ip_limit_period: 60
+  redis_server: localhost
+
+test:
+  ip_limit_count: 60
+  ip_limit_period: 60
+  redis_server: localhost
