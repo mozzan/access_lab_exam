@@ -9,6 +9,10 @@ module RedisWrapper
       client.keys(pattern)
     end
 
+    def del(keys)
+      client.del(*keys)
+    end
+
     private
 
     def client

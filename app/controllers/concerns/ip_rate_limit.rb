@@ -13,6 +13,12 @@ module IpRateLimit
     connections.size > IP_LIMIT_COUNT
   end
 
+  def clean_ip_connections(ip)
+    client = RedisWrapper::Client.new
+    keys = client.keys(key_pattern(ip))
+    client.del(keys) if keys.present?
+  end
+
   private
 
   def key(ip)
